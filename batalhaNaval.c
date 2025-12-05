@@ -13,14 +13,34 @@ int main() {
     }
 
     // Navio horizontal (3 posições)
-    tabuleiro[2][3] = 3; // primeiro índici = i, segundo índici = j
-    tabuleiro[2][4] = 3;
+    tabuleiro[2][4] = 3; // primeiro índici = i, segundo índici = j
     tabuleiro[2][5] = 3;
+    tabuleiro[2][6] = 3;
 
     // Navio vertical (3 posições)
-    tabuleiro[5][7] = 3;
-    tabuleiro[6][7] = 3;
-    tabuleiro[7][7] = 3;
+    tabuleiro[5][2] = 3;
+    tabuleiro[6][2] = 3;
+    tabuleiro[7][2] = 3;
+
+
+    int linhaD1 = 1;
+    int colunaD1 = 1;
+
+    for (i = 0; i < 3; i++) {
+        tabuleiro[linhaD1 + i][colunaD1 + i] = 3;
+    }
+
+    
+    // Navio diagonal ↙ (linha + i, coluna - i)
+   
+    int linhaD2 = 4;
+    int colunaD2 = 8;
+
+    for (i = 0; i < 3; i++) {
+        tabuleiro[linhaD2 + i][colunaD2 - i] = 3;
+    }
+
+     
 
 
     printf ("   A B C D E F G H I J\n");
